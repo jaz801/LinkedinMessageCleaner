@@ -1,0 +1,37 @@
+  How to clean your Linkedin Inbox
+
+  Step 1 go to messages:
+  
+  Do you want to get rid of recruiter messages:
+  Search:
+  - connect
+  - job
+  - experience
+  - opportunity
+ 
+  Do you want to get rid of sales messages:
+  Search:
+  - connect
+  - industry
+  - background
+  - network
+  
+ * Step 1 - open link https://www.linkedin.com/messaging/thread/new/
+ * Step 2 - open browsers console panel by right click and inspect
+ * Step 3 - go to console tab and paste script:
+ 
+ 
+setInterval(function () {
+    [...document.querySelectorAll(".msg-selectable-entity__checkbox-circle")].map(
+        function (x) {
+            x.click();
+            setTimeout(function () {
+                [...document.querySelectorAll('[type="trash-icon"]')].map(a => a.click());
+            }, 1000);
+        })
+                      }, 3000);
+
+* Step 5 - Hit the enter and click yes when prompt for delete
+
+ * Warning - this script must be run and executed on your own risk.
+ * Author is not responsible for anything.
